@@ -3,8 +3,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * See
@@ -19,34 +17,65 @@ public class URI1763SantasTranslator {
 	static PrintWriter out = new PrintWriter(System.out);
 
 	public static void main(String[] args) throws IOException {
-		Map<String, String> countries = new HashMap<String, String>();
-		countries.put("brasil", "Feliz Natal!");
-		countries.put("austria", "Frohe Weihnacht!");
-		countries.put("espanha", "Feliz Navidad!");
-		countries.put("grecia", "Kala Christougena!");
-		countries.put("estados-unidos", "Merry Christmas!");
-		countries.put("inglaterra", "Merry Christmas!");
-		countries.put("australia", "Merry Christmas!");
-		countries.put("portugal", "Feliz Natal!");
-		countries.put("suecia", "God Jul!");
-		countries.put("turquia", "Mutlu Noeller");
-		countries.put("argentina", "Feliz Navidad!");
-		countries.put("chile", "Feliz Navidad!");
-		countries.put("mexico", "Feliz Navidad!");
-		countries.put("antardida", "Merry Christmas!");
-		countries.put("canada", "Merry Christmas!");
-		countries.put("italia", "Buon Natale!");
-		countries.put("libia", "Buon Natale!");
-		countries.put("siria", "Milad Mubarak!");
-		countries.put("marrocos", "Milad Mubarak!");
-		countries.put("japao", "Merii Kurisumasu!");
-		countries.put("alemanha", "Frohliche Weihnachten!");
-		countries.put("belgica", "Zalig Kerstfeest!");
-		countries.put("coreia", "Chuk Sung Tan!");
-		countries.put("irlanda", "Nollaig Shona Dhuit!");
 		String country;
 		while ((country = in.readLine()) != null) {
-			out.println(countries.containsKey(country) ? countries.get(country) : "--- NOT FOUND ---");
+			switch (country) {
+				case "estados-unidos":
+				case "inglaterra":
+				case "australia":
+				case "antardida":
+				case "canada":
+					out.println("Merry Christmas!");
+					break;
+				case "espanha":
+				case "argentina":
+				case "chile":
+				case "mexico":
+					out.println("Feliz Navidad!");
+					break;
+				case "brasil":
+				case "portugal":
+					out.println("Feliz Natal!");
+					break;
+				case "italia":
+				case "libia":
+					out.println("Buon Natale!");
+					break;
+				case "siria":
+				case "marrocos":
+					out.println("Milad Mubarak!");
+					break;
+				case "austria":
+					out.println("Frohe Weihnacht!");
+					break;
+				case "grecia":
+					out.println("Kala Christougena!");
+					break;
+				case "suecia":
+					out.println("God Jul!");
+					break;
+				case "turquia":
+					out.println("Mutlu Noeller");
+					break;
+				case "japao":
+					out.println("Merii Kurisumasu!");
+					break;
+				case "alemanha":
+					out.println("Frohliche Weihnachten!");
+					break;
+				case "belgica":
+					out.println("Zalig Kerstfeest!");
+					break;
+				case "coreia":
+					out.println("Chuk Sung Tan!");
+					break;
+				case "irlanda":
+					out.println("Nollaig Shona Dhuit!");
+					break;
+				default:
+					out.println("--- NOT FOUND ---");
+					break;
+			}
 		}
 		out.close();
 	}
