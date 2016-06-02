@@ -12,19 +12,19 @@ import java.io.PrintWriter;
  * @author Brian Yeicol Restrepo Tangarife
  */
 public class URI1197BackToHighSchoolPhysics {
-    
-    static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    static PrintWriter out = new PrintWriter(System.out);
-    
-    public static void main(String[] args) throws IOException {
-        String l;
-        while ((l = in.readLine()) != null) {            
-            String[] P = l.split("\\s");
-            int v = Integer.parseInt(P[0]);
-            int t = Integer.parseInt(P[1]);
-            out.println(2 * v * t);
-        }
-        out.close();
-    }
-    
+
+	static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	static PrintWriter out = new PrintWriter(System.out);
+
+	public static void main(String[] args) throws IOException {
+		String l;
+		while ((l = in.readLine()) != null) {
+			String[] P = l.split("\\s");
+			int v = Integer.parseInt(P[0]);
+			int t = Integer.parseInt(P[1]);
+			out.println(2 * v * t);
+		}
+		out.close();
+	}
+
 }
