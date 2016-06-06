@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Arrays;
 
 /**
  * See
@@ -18,10 +17,10 @@ public class URI1743AutomatedCheckingMachine {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) throws IOException {
-        int[] A = readArray();
-        int[] B = readArray();
+        String[] A = in.readLine().split("\\s");
+        String[] B = in.readLine().split("\\s");
         for (int i = 0; i < 5; i++) {
-            if (A[i] + B[i] != 1) {
+            if (Integer.parseInt(A[i]) + Integer.parseInt(B[i]) != 1) {
                 out.println("N");
                 out.close();
                 break;
@@ -30,15 +29,4 @@ public class URI1743AutomatedCheckingMachine {
         out.println("Y");
         out.close();
     }
-
-    private static int[] readArray() throws IOException {
-        String[] line = in.readLine().split("\\s");
-        int l = line.length;
-        int[] a = new int[l];
-        for (int i = 0; i < l; i++) {
-            a[i] = Integer.parseInt(line[i]);
-        }
-        return a;
-    }
-
 }
