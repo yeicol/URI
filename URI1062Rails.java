@@ -19,34 +19,34 @@ public class URI1062Rails {
 	public static void main(String[] args) throws IOException {
 		String l;
 		String[] coaches;
-		int N, current, count, coach;
+		int N, current, coach;
 		boolean firstTest = true;
 		while (!(l = read()).equals("0")) {
 			N = toInt(l);
-			Stack<Integer> stack = new Stack<>();
 			if (firstTest) {
 				firstTest = false;
 			} else {
 				out.println();
 			}
 			while (!(l = read()).equals("0")) {
+				Stack<Integer> stack = new Stack<>();
 				coaches = l.split("\\s");
 				current = 0;
 				coach = toInt(coaches[current]);
 				for (int i = 1; i <= N; i++) {
 					stack.push(i);
+
 					while (!stack.isEmpty() && coach == stack.lastElement()) {
 						if (++current < N) {
-							System.out.print(coach + " ");
 							coach = toInt(coaches[current]);
 						}
 						stack.pop();
 					}
 				}
-
-				System.out.println(stack.isEmpty() && current == N ? "Yes" : "No");
+				out.println(stack.isEmpty()? "Yes" : "No");
 			}
 		}
+		out.println();
 		out.close();
 	}
 
