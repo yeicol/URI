@@ -36,7 +36,7 @@ public class URI1785Kaprekar {
 		int cnt = 0;
 
 		while (X != 6174) {
-			if (isPosibleKaprekar(X)) {
+			if (X != 0) {
 				int hi = highest_number_with_digits_of(X);
 				int lo = lowest_number_with_digits_of(X);
 				X = hi - lo;
@@ -74,26 +74,6 @@ public class URI1785Kaprekar {
 
 	private static String completeString(String s, int count, String complement) {
 		return s + new String(new char[count - s.length()]).replace("\0", complement);
-	}
-
-	private static boolean isPosibleKaprekar(int X) {
-
-		char[] aux = String.valueOf(X).toCharArray();
-		int[] numbers = new int[10];
-		if (aux.length < 4) {
-			numbers[0]++;
-		}
-		for (char c : aux) {
-			numbers[Character.getNumericValue(c)]++;
-		}
-		int diff = 0;
-		for (int i = 0; i < 10; i++) {
-			if (numbers[i] > 0) {
-				diff++;
-			}
-		}
-		return diff > 1;
-
 	}
 
 }
