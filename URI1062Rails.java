@@ -21,41 +21,33 @@ public class URI1062Rails {
 		String[] coaches;
 		int N, current, coach;
 		boolean firstTest = true;
-		while (!(l = read()).equals("0")) {
-			N = toInt(l);
+		while (!(l = in.readLine()).equals("0")) {
+			N = Integer.parseInt(l);
 			if (firstTest) {
 				firstTest = false;
 			} else {
 				out.println();
 			}
-			while (!(l = read()).equals("0")) {
+			while (!(l = in.readLine()).equals("0")) {
 				Stack<Integer> stack = new Stack<>();
 				coaches = l.split("\\s");
 				current = 0;
-				coach = toInt(coaches[current]);
+				coach = Integer.parseInt(coaches[current]);
 				for (int i = 1; i <= N; i++) {
 					stack.push(i);
 
 					while (!stack.isEmpty() && coach == stack.lastElement()) {
 						if (++current < N) {
-							coach = toInt(coaches[current]);
+							coach = Integer.parseInt(coaches[current]);
 						}
 						stack.pop();
 					}
 				}
-				out.println(stack.isEmpty()? "Yes" : "No");
+				out.println(stack.isEmpty() ? "Yes" : "No");
 			}
 		}
 		out.println();
 		out.close();
-	}
-
-	private static String read() throws IOException {
-		return in.readLine();
-	}
-
-	private static int toInt(String s) {
-		return Integer.parseInt(s);
 	}
 
 }
