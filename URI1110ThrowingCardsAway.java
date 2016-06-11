@@ -29,7 +29,7 @@ public class URI1110ThrowingCardsAway {
                 out.println(1);
             } else {
                 base = 1;
-                List<Integer> cards = new ArrayList<Integer>();
+                List<Integer> cards = new ArrayList<>();
                 for (int i = 1; i <= n; i++) {
                     cards.add(i);
                 }

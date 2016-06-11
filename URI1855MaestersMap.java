@@ -6,7 +6,8 @@ import java.io.PrintWriter;
 
 /**
  * See
- * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/">URI1855MaestersMap</a>
+ * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1855">Master's
+ * Map</a>
  *
  * @author Brian Yeicol Restrepo Tangarife
  */

@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.math.BigInteger;
 
 /**
  * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1169">Grains
@@ -82,14 +81,6 @@ public class URI1169GrainsInAChessBoard {
         "1537228672809129"};
 
     public static void main(String[] args) throws IOException {
-        /*
-        BigInteger prev = BigInteger.ONE;
-        BigInteger two = new  BigInteger("2");
-        BigInteger kg = new  BigInteger("12000");
-        for (int i = 1; i < 65; i++) {
-            prev = prev.multiply(two);
-            out.println((prev.divide(kg)));
-        }*/
         int N = readInt();
         while (N-- > 0) {
             int X = readInt();

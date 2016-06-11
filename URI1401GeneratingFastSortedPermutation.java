@@ -17,14 +17,13 @@ import java.util.Set;
  * @author Brian Yeicol Restrepo Tangarife
  */
 public class URI1401GeneratingFastSortedPermutation {
-    
+
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     static PrintWriter out = new PrintWriter(System.out);
-    
+
     public static void main(String[] args) throws IOException {
         int N = readInt();
         String s;
-        //String w;
         while (N-- > 0) {
             s = read();
 
@@ -45,7 +44,7 @@ public class URI1401GeneratingFastSortedPermutation {
         }
         out.close();
     }
-    
+
     private static Set<String> getPermutations(String prefix, String str, Set<String> s) {
         int n = str.length();
         if (n == 0) {
@@ -57,14 +56,13 @@ public class URI1401GeneratingFastSortedPermutation {
         }
         return s;
     }
-    
+
     private static String read() throws IOException {
         return in.readLine();
     }
-    
+
     private static int readInt() throws IOException {
         return Integer.parseInt(in.readLine());
     }
-
 
 }

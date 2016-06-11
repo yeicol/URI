@@ -5,7 +5,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
 /**
- * See <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1383">Sudoku</a>
+ * See
+ * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1383">Sudoku</a>
+ *
  * @author Brian Yeicol Restrepo Tangarife
  */
 public class URI1383Sudoku {
@@ -22,11 +24,11 @@ public class URI1383Sudoku {
 
             int[][] sudoku = new int[n][n];
             for (int i = 0; i < n; i++) {
-				String[] p = in.readLine().split("\\s");
-				int[] row = new int[n];
-				for (int j = 0; j < n; j++) {
-					row[j] = Integer.parseInt(p[j]);
-				}
+                String[] p = in.readLine().split("\\s");
+                int[] row = new int[n];
+                for (int j = 0; j < n; j++) {
+                    row[j] = Integer.parseInt(p[j]);
+                }
                 sudoku[i] = row;
             }
 
@@ -75,7 +77,7 @@ public class URI1383Sudoku {
                     }
                 }
             }
-			out.println("Instancia " + instance);
+            out.println("Instancia " + instance);
             out.println(flag ? "SIM\n" : "NAO\n");
         }
         out.close();
