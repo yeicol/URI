@@ -16,32 +16,19 @@ public class URI1618Colision {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) throws IOException {
-        int N = readInt(), rx, ry, ax, bx, cx, dx, ay, by, cy, dy;
+        int N = Integer.parseInt(in.readLine()), rx, ry, ax, bx, by, cy;
         int[] CP;
         while (N-- > 0) {
             CP = readArray();
             ax = CP[0];
-            ay = CP[1];
             bx = CP[2];
             by = CP[3];
-            cx = CP[4];
             cy = CP[5];
-            dx = CP[6];
-            dy = CP[7];
             rx = CP[8];
             ry = CP[9];
-            if (ax <= rx && ay <= ry && rx <= bx && by <= ry && dx <= rx && ry <= dy && rx <= cx && ry <= cy) {
-                out.println(1);
-            } else {
-                out.println(0);
-            }
-
+            out.println(ax <= rx && rx <= bx && by <= ry && ry <= cy ? 1 : 0);
         }
         out.close();
-    }
-
-    private static int readInt() throws IOException {
-        return Integer.parseInt(in.readLine());
     }
 
     private static int[] readArray() throws IOException {
