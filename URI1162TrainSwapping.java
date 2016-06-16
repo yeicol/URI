@@ -17,7 +17,7 @@ public class URI1162TrainSwapping {
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) throws IOException {
-        int N = readInt(), pos;
+        int N = readInt();
         int L, swaps;
         String[] P;
         while (N-- > 0) {

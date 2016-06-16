@@ -3,51 +3,51 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Arrays;
 
 /**
  * See
- * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1256">Hash
- * Tables</a>
+ * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1107">Laser
+ * Sculpture</a>
  *
  * @author Brian Yeicol Restrepo Tangarife
  */
-public class URI1256HashTables {
+public class URI1107LaserSculpture {
 
     static BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     static PrintWriter out = new PrintWriter(System.out);
 
     public static void main(String[] args) throws IOException {
-        int N = readInt(), M, index;
-        int[] P;
-        String[] elements;
-        while (N-- > 0) {
-            P = readArray();
-            M = P[0];
-            String[] keys = new String[M];
-            Arrays.fill(keys, "");
-            elements = read().split("\\s");
-            for (String element : elements) {
-                index = toInt(element) % M;
+        String l;
+        boolean f;
+        int ans, A, tmp, w;
+        int[] X;
+        while (!(l = read()).equals("0 0")) {
+            A = toInt(l.split("\\s")[0]);
+            X = readArray();
+            tmp = A;
+            w = A;
+            ans = 0;
+            f = false;
+            for (int Xi : X) {
+                if (Xi <= tmp) {
+                    f = false;
+                } else {
+                    if (!f) {
+                        ans += w - tmp;
+                    }
+                    w = Xi;
+                    f = true;
+                }
 
-                keys[index] += " -> " + element;
+                tmp = Xi;
             }
-            for (int i = 0; i < M; i++) {
-                out.println(i + keys[i] + " -> \\");
-            }
-            if (N != 0) {
-                out.println();
-            }
+            out.println(f ? ans : ans + w - tmp);
         }
         out.close();
     }
 
     private static String read() throws IOException {
         return in.readLine();
-    }
-
-    private static int readInt() throws IOException {
-        return Integer.parseInt(in.readLine());
     }
 
     private static int[] readArray() throws IOException {

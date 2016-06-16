@@ -1,2 +1,2 @@
 # URI
-Programming solutions
+URI Online Judge solutions in Java
