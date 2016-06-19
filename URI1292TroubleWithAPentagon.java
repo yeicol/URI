@@ -9,7 +9,7 @@ import java.io.PrintWriter;
  * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1292">Trouble
  * with a Pentagon</a>
  *
- * @author Brian Yeicol Restrepo TangarifeURI1256HashTables
+ * @author Brian Yeicol Restrepo Tangarife
  */
 public class URI1292TroubleWithAPentagon {
 
