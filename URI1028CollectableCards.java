@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 /**
  * See
- * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/">URI1028CollectableCards</a>
+ * <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/1028">Collectable Cards</a>
  *
  * @author Brian Yeicol Restrepo Tangarife
  */
