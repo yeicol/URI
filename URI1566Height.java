@@ -23,9 +23,7 @@ public class URI1566Height {
     static Reader in = new Reader(System.in);
     static Writer out = new Writer(System.out);
 
-
     public static void main(String[] args) throws IOException {
-
         int NC = in.nextInt();
         int l;
         int[] h;
