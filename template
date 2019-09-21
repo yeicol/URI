@@ -19,7 +19,7 @@ import java.util.StringTokenizer;
 
 
 /**
- * See <a href="https://www.urionlinejudge.com.br/judge/en/problems/view/">${name}</a>
+ * ${name}
  * @author Brian Yeicol Restrepo Tangarife
  */
 public class ${name} {
